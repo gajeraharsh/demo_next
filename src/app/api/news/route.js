@@ -5,7 +5,12 @@ export async function GET() {
   const rssUrl = "https://www.justice.gov/news/rss?f[0]=facet_topics:25356";
 
   try {
-    const response = await fetch(rssUrl);
+    const response = await fetch(rssUrl, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (compatible; DemoNextApp/1.0; +https://demo-next-kappa-olive.vercel.app/)",
+        "Accept": "application/rss+xml,application/xml,text/xml",
+      },
+    });
 
     if (!response.ok) {
       return NextResponse.json(
