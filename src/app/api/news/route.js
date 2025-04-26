@@ -7,8 +7,8 @@ export async function GET() {
   try {
     const response = await fetch(rssUrl, {
       headers: {
-        // "User-Agent": "Mozilla/5.0 (compatible; DemoNextApp/1.0; +https://demo-next-kappa-olive.vercel.app/)",
-        // "Accept": "application/rss+xml,application/xml,text/xml",
+        "User-Agent": "Mozilla/5.0 (compatible; DemoNextApp/1.0; +https://demo-next-kappa-olive.vercel.app/)",
+        "Accept": "application/rss+xml,application/xml,text/xml",
       },
     });
 
